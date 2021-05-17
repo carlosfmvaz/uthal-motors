@@ -1,0 +1,279 @@
+body{
+    background-color: #f5f5f5;
+}
+.row{
+    margin: 0 !important;
+}
+
+.nav-item{
+    height: 45px;
+}
+.nav-item:hover{
+    border-bottom: 2px solid #DC3545;
+}
+
+#nav-logo:hover{
+    border-bottom: 0px !important;
+}
+
+/* Carousel */
+.carousel{
+    max-height: 50vh;
+}
+.carousel img{
+    max-height: 50vh;
+}
+.center{
+    text-align: center;
+}
+.section-search button{
+    width: 100%;
+}
+
+.announce-header{
+    margin-top: 20px;
+}
+
+.announce-btn{
+    width: 150px;
+}
+
+.section-divider{
+    margin-top: 30px
+}
+
+#see-offers-btn{
+    width: 100%
+}
+
+/* cards */
+
+#welcome-cards .card-text,.card-subtitle{
+    font-size: 14px;
+    color: rgb(85, 85, 85);
+}
+
+#welcome-cards .card-link{
+    text-decoration: none;
+    color: #000;
+}
+#welcome-cards .card-link:hover{
+    text-decoration: none;
+    color: #000;
+}
+
+#welcome-cards .card-price{
+    font-size: 22px;
+    font-weight: 600;
+    color: #464646;
+    margin-top: 10%;
+}
+
+#welcome-cards .card{
+    padding: 0;
+    border: 0px;
+}
+#welcome-cards .card img{
+    max-width: 250px;
+}
+
+#welcome-cards .card-body{
+    border: 1px solid #ebebeb;
+    max-width: 250px;
+
+}
+
+#welcome-cards .card-footer{
+    height: 40px;
+    border-left: 1px solid #ebebeb;
+    border-top: 0px;
+    background-color: #fff;
+}
+#welcome-cards .card-footer p{
+    font-weight: 600;
+}
+
+/* Announce Details */
+.details-div{
+    background-color: #fff;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+.details-img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    max-height: 45vh;
+}
+
+
+#price-div h2{
+    width: auto;
+    color: rgb(0, 0, 0);
+}
+
+#order-button{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* My announces */
+
+#my-announces-div{
+    margin-top: 10px;
+}
+#my-announces-div .card{
+    margin-top: 10px;
+}
+
+
+/* Announce Details */
+.edit-details-div{
+    background-color: #fff;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+.edit-details-div .details-img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    max-height: 45vh;
+}
+
+
+.edit-details-div #price-div h2{
+    width: auto;
+    color: rgb(0, 0, 0);
+}
+
+.edit-details-div #order-button{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.edit-details-div label{
+    padding: 0;
+}
+.edit-details-div textarea{
+    height: 200px;
+}
+
+/* Edit Announce */
+#delete-announce-form{
+    margin-top: -25px !important;
+    margin-bottom: 20px !important;
+}
+
+/* All announces content */
+
+#filter{
+    padding: 20px;
+}
+
+#filter #form-select{
+    margin-bottom: 20px;
+}
+
+#all-announces-content{
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 0 !important;
+}
+#all-announces-filter-div #filter{
+    background-color: #fff;
+    margin-top: 20px;
+    border: 1px solid rgb(209, 209, 209);
+}
+
+.announce-item{
+    height: 190px;
+    width: 100%;
+    background-color: grey;
+    border: 1px solid rgb(209, 209, 209);
+    margin-bottom: 10px;
+}
+
+.announce-item .announce-body{
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.announce-item .announce-body .announce-img-div{
+    position: relative;
+    padding: 0 !important;
+}
+
+.announce-item .announce-body img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.announce-item .announce-body .annonce-overview-features p{
+    margin: 5px !important;
+}
+
+.announce-item .announce-body .annonce-overview-features .car-options{
+    margin-top: 10px;
+}
+
+.announce-item .announce-body .annonce-overview-features .car-options p{
+    font-size: 14px;
+    font-weight: 500;
+    color: #464646;
+}
+
+.announce-item .announce-body .annonce-overview-features .minimal-description{
+    font-size: 15px;
+    text-overflow: ellipsis;
+}
+
+.announce-item .announce-body .annonce-pricing{
+    position: relative;
+    
+}
+
+.announce-item .announce-body .annonce-pricing .price-text-div{
+    background-color: #1148AD;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    height: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.announce-item .announce-body .annonce-pricing .discount-div{
+    background-color: red;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    height: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.announce-item .announce-body .annonce-pricing .discount-values{
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.announce-item .announce-body .annonce-pricing .discount-price{
+    color: #ff0000;
+    text-decoration: line-through;
+}
+
+.announce-item .announce-body .annonce-pricing .btn-details-div{
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+}
+
