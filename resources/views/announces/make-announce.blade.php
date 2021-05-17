@@ -66,7 +66,7 @@
             </div>
             <br>
             <div class="center">
-                <button type="submit" class="btn btn-danger announce-btn">Create</button>
+                <button type="submit" class="btn announce-btn btn-default-color">Create</button>
             </div>
         </form>
     </div>

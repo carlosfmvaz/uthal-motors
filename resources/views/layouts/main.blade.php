@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" href="/img/icon.png">
 
     {{-- Jquery --}}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    {{-- Bootstrap --}}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> {{-- Bootstrap --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
     {{-- Main Styles --}}
@@ -20,12 +20,14 @@
     {{-- Jquery Mask Money --}}
     <script src="/js/jquery.maskMoney.js" type="text/javascript"></script>
 
+    {{-- Bootstrap js --}}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
     <title>@yield('title')</title>
 </head>
 
 <body>
     <div class="row">
-
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <div class="col-md-10 offset-md-1 recommend-div">
@@ -76,7 +78,7 @@
     </div>
 
     @yield('content')
-
+   
     <script>
         $("#price").maskMoney({
             thousands: ',',

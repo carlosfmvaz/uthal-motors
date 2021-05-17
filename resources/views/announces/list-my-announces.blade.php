@@ -11,7 +11,7 @@
                         <h5 class="card-header">{{ $announce['v_brand'] }} {{ $announce['v_model'] }}</h5>
                         <div class="card-body">
                             <p class="card-text">Posted in {{$announce['created_at']}}</p>
-                            <a href="/announces/edit/{{$announce['id']}}" class="btn btn-danger">See announce</a>
+                            <a href="/announces/edit/{{$announce['id']}}" class="btn btn-default-color">See announce</a>
                         </div>
                     </div>
                 @endforeach

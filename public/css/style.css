@@ -4,12 +4,18 @@ body{
 .row{
     margin: 0 !important;
 }
+.navbar{
+    background-color: #ffffff !important;
+}
 
 .nav-item{
     height: 45px;
 }
+.nav-item a{
+    color: rgb(0, 0, 0) !important;
+}
 .nav-item:hover{
-    border-bottom: 2px solid #DC3545;
+    border-bottom: 2px solid #014f86;
 }
 
 #nav-logo:hover{
@@ -46,53 +52,82 @@ body{
     width: 100%
 }
 
-/* cards */
-
-#welcome-cards .card-text,.card-subtitle{
-    font-size: 14px;
-    color: rgb(85, 85, 85);
-}
-
-#welcome-cards .card-link{
-    text-decoration: none;
-    color: #000;
-}
-#welcome-cards .card-link:hover{
-    text-decoration: none;
-    color: #000;
-}
-
-#welcome-cards .card-price{
-    font-size: 22px;
-    font-weight: 600;
-    color: #464646;
-    margin-top: 10%;
-}
-
-#welcome-cards .card{
-    padding: 0;
-    border: 0px;
-}
-#welcome-cards .card img{
-    max-width: 250px;
-}
-
-#welcome-cards .card-body{
-    border: 1px solid #ebebeb;
-    max-width: 250px;
-
-}
-
-#welcome-cards .card-footer{
+#warning{
+    width: 100%;
     height: 40px;
-    border-left: 1px solid #ebebeb;
-    border-top: 0px;
-    background-color: #fff;
+    padding: 8px;
+    background-color: #014f86;
+    margin: 0 !important;
+    color: #fff;
 }
-#welcome-cards .card-footer p{
+
+#home-header{
+    background-image: url('/img/header-img.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 75vh;
+    padding: 0 !important;
+}
+#header-text{
+    color: #fff;
+    margin-top: 50px;
+    font-size: 40px;
+}
+#header-sub-text{
+    color: #fff;
+    margin-top: 20px;
+    font-size: 20px;
     font-weight: 600;
 }
 
+#main-search-div{
+    height: auto;
+    background-color: #ffffff;
+    margin-top: 50px !important;
+    padding: 25px;
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+}
+
+#main-search-div #search-input{
+    height: 50px;
+}
+
+#main-search-div label{
+    font-size: 18px;
+    margin-top: 10px;
+}
+#search-btn{
+    height: 50px;
+}
+
+.btn-default-color{
+    background-color: #014f86;
+    border-color: #014f86;
+    color: #fff;
+}
+
+.btn-default-color:hover{
+    color: #fff;
+    background-color: #002b49;
+}
+
+#cards-block{
+    padding: 30px;
+}
+
+.card-content{
+    text-align: center;
+}
+
+.card-content i{
+    font-size: 30px;
+}
+
+.card-content h4{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 /* Announce Details */
 .details-div{
     background-color: #fff;
@@ -277,3 +312,8 @@ body{
     text-align: center;
 }
 
+/* Footer */
+.page-footer{
+    background-color: rgb(24, 24, 24);
+    color: #ffff;
+}
