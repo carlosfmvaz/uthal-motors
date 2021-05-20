@@ -17,9 +17,6 @@
                                 <option value="High to low">High to low</option>
                             </select>
                         </div>
-                        <div class="row">
-                            <button class="btn btn-danger" id="btn-filter" onclick="filterAnnounces()">Filter</button>
-                        </div>
                     </div>
                 </div>
             </div>

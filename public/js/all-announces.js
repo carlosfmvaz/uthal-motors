@@ -19,7 +19,7 @@ const renderAnnounces = function (announces){
                         <p><i class="fas fa-tint"></i> ${announces[i]['v_color']}</p>
                         <p><i class="fas fa-car"></i> SUV </p>
                     </div>
-                    <p class="minimal-description">${announces[i]['v_desciption']}</p>
+                    <p class="minimal-description">${announces[i]['v_description'].substring(0,55) + '...'}</p>
                 </div>
                 <div class="col-md-4 col-sm-12 annonce-pricing">
                     <div class="row">
@@ -35,7 +35,7 @@ const renderAnnounces = function (announces){
                             <span class="discount-price">$ 80.800</span>
                         </div> -->
                         <div class="row">
-                            <span>${announces[i]['v_price']}</span>
+                            <span>$ ${announces[i]['v_price']}</span>
                         </div>
                     </div>
                     <div class="row">
@@ -51,7 +51,7 @@ const renderAnnounces = function (announces){
 
 }
 
-const filterAnnounces = function(){
+document.getElementById("form-select").addEventListener('change', function(){
     let selectEl = document.getElementById('form-select');
     
     $.ajax({
@@ -71,8 +71,9 @@ const filterAnnounces = function(){
             console.log(response)
         }
     });
+}) 
+    
 
-}
 
 window.onload = function(){
     $.ajax({

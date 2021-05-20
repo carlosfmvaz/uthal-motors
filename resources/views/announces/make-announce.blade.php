@@ -5,7 +5,7 @@
 @section('content')
     <div class="container">
         <div class="announce-header">
-            <h2>Make an announce</h2>
+            <h2>Create announce</h2>
             <p>Here you are able to create an announce as the way as you want!</p>
         </div>
         <form action="create" method="POST" enctype="multipart/form-data">

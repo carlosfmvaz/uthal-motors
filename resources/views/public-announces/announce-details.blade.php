@@ -20,7 +20,7 @@
                     <p><b>Color:</b> {{ $announce[0]->v_color }}</p>
                     <p><i class="fas fa-map-marker-alt"></i> {{ $announce[0]->city }}</p>
                     <div id="price-div">
-                        <h2>{{ $announce[0]->v_price }}</h2>
+                        <h2>$ {{ $announce[0]->v_price }}</h2>
                     </div>
                     <p><b>Description:</b><br>{{ $announce[0]->v_description }}</p>
                     <button class="btn btn-danger" type="submit" id="order-button">Order Now</button>

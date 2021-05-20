@@ -21,7 +21,7 @@ class CreateAnnouncesTable extends Migration
             $table->string('v_model');
             $table->double('v_price');
             $table->string('v_color');
-            $table->string('v_description');
+            $table->longText('v_description');
             $table->longText('image');
             $table->string('city');
             $table->foreignId('id_owner');

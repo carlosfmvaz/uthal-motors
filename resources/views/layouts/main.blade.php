@@ -45,7 +45,7 @@
                                 <a class="nav-link active" aria-current="page" href="/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Deals</a>
+                                <a class="nav-link" href="/announces/all">See Offers</a>
                             </li>
                             @guest
                                 <li class="nav-item">
@@ -57,7 +57,7 @@
                             @endguest
                             @auth
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/announces/make-announce">Make an annouce</a>
+                                    <a class="nav-link" href="/announces/make-announce">Create annouce</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/announces/list-my-announces">My announces</a>
