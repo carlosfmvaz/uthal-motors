@@ -36,24 +36,29 @@ class AnnounceController extends Controller
         $announce->image = $filePath;
         $announce->save();
 
-        return redirect("/");
+        return redirect("/")
+        ->with('message', 'You have successfully registered a new announce!')
+        ->with('success', true);
     }
 
   
 
     public function update(Request $request)
     {
-        $announce = Announce::where('id', $request->id)
+        // Converting the incoming price string into float
+        $price = floatval(str_replace(['$',','],'',$request->price));
+
+        Announce::where('id', $request->id)
         ->update([
             'v_brand' => $request->brand,
             'v_model' => $request->model,
             'v_color' => $request->color,
             'city' => $request->city,
-            'v_price' => $request->price,
+            'v_price' => $price,
             'v_description' => $request->description
         ]);
 
-        return redirect('/announces/edit/'.$request->id);
+        return redirect('/announces/edit/'.$request->id)->with('message', 'You have successfully edited your announce!');
 
     }
 
@@ -61,7 +66,7 @@ class AnnounceController extends Controller
     {
         Announce::where("id",$request->id)->delete();
 
-        return redirect('/announces/list-my-announces');
+        return redirect('/announces/list-my-announces')->with('message', 'You have successfully deleted your announce!');
 
     }
 

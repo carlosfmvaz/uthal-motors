@@ -22,6 +22,11 @@
 
     {{-- Bootstrap js --}}
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        @if (session('message'))
+            alert('{{ session('message') }}');
+        @endif
+    </script>
 
     <title>@yield('title')</title>
 </head>
@@ -76,9 +81,9 @@
             </div>
         </nav>
     </div>
-
+    
     @yield('content')
-   
+
     <script>
         $("#price").maskMoney({
             thousands: ',',
