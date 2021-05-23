@@ -32,6 +32,9 @@ Due to the use of Laravel Framework, the system structure is based on MVC (Model
 - Run "php artisan migrate" to migrate the entire database
 - Run "php artisan serve" to run the application on your localhost
 
+## Important
+
+Before you create a new announce you must add some categories in the categories table. You can do this writing a simple insert sql query.
 
 ## Screenshots
 
