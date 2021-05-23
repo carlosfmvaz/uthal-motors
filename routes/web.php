@@ -16,6 +16,7 @@ Route::get('/announces/all', function(){
 
 // List filtered announces
 Route::post('/announces/filter-announces',[AnnounceController::class, 'filterAnnounces']);
+Route::get('/announces/filter-announces-keyword/{keyword}',[AnnounceController::class, 'filterAnnouncesKeyword']);
 
 // Auth Pages
 Route::get('/', [PageController::class, 'welcome']);

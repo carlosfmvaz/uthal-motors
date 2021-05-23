@@ -1,5 +1,7 @@
 "use strict";
 
+let params = new URLSearchParams(window.location.search);
+
 const renderAnnounces = function (announces){
     
     document.getElementById('all-announces-content').innerHTML = "";
@@ -49,6 +51,47 @@ const renderAnnounces = function (announces){
         document.getElementById('all-announces-content').appendChild(htmlElements);
     }
 
+    if (announces == false)
+    document.getElementById('all-announces-content').innerHTML = "<h2 class='center' style='margin-top: 20px'>No results found!</h2>"
+    else
+    document.getElementById('filter-message').innerHTML = "";
+
+}
+
+window.onload = function(){
+    if (params.has('keyword') && params.get('keyword') != ''){
+        $.ajax({
+            url: "filter-announces-keyword/" + params.get('keyword'),
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              },
+            
+            dataType: 'json',
+            success: function(response){
+                renderAnnounces(response);
+                document.getElementById('filter-message').innerHTML = '<h2>Results for: '+ params.get('keyword') +'</h2>'
+            },
+            error: function(response){
+                console.log(response);
+            },
+        });
+    }else{
+        $.ajax({
+            url: "filter-announces",
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              },
+            type: "post",
+            data: {
+                type: 'All'
+            },
+            dataType: 'json',
+            success: function(response){
+                renderAnnounces(response);
+            },
+        });
+    }
+      
 }
 
 document.getElementById("form-select").addEventListener('change', function(){
@@ -71,26 +114,9 @@ document.getElementById("form-select").addEventListener('change', function(){
             console.log(response)
         }
     });
-}) 
-    
+})
 
 
-window.onload = function(){
-    $.ajax({
-        url: "filter-announces",
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-          },
-        type: "post",
-        data: {
-            type: 'All'
-        },
-        dataType: 'json',
-        success: function(response){
-            renderAnnounces(response);
-        },
-    });
-}
 
 
 

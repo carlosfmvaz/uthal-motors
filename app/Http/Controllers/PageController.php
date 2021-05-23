@@ -49,7 +49,9 @@ class PageController extends Controller
             ->where('announces.id', $id)
             ->get(['announces.*', 'categories.cat_name']);
 
-        return view('public-announces/announce-details', ['announce' => $announce]);
+        $announce_location = (empty($announce[0]['city']) ? '' : $announce[0]['city'] . ' - ') . $announce[0]['state'] . ' - ' . strtoupper($announce[0]['country']);
+
+        return view('public-announces/announce-details', ['announce' => $announce, 'announce_location' => $announce_location]);
     }
     
     public function listMyAnnounces()

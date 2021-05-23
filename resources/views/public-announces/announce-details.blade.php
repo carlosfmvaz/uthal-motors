@@ -18,7 +18,7 @@
                     <h5>Vehicle Specifications</h5>
                     <p><b>Car body:</b> {{ $announce[0]->cat_name }}</p>
                     <p><b>Color:</b> {{ $announce[0]->v_color }}</p>
-                    <p><i class="fas fa-map-marker-alt"></i> {{ $announce[0]->city }}</p>
+                    <p><i class="fas fa-map-marker-alt"></i> {{ $announce_location}}</p>
                     <div id="price-div">
                         <h2>$ {{ $announce[0]->v_price }}</h2>
                     </div>

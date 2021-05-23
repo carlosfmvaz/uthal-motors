@@ -5,6 +5,7 @@
 @section('content')
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <div class="container">
+        <div class="row" id='filter-message'></div>
         <div class="row">
             <div class="col-md-3 " id="all-announces-filter-div">
                 <div class="row">

@@ -85,4 +85,16 @@ class AnnounceController extends Controller
         echo json_encode($filteredAnnounces);
 
     }
+
+    public function filterAnnouncesKeyword($keyword){
+
+        $announces = new Announce;
+
+        $filteredAnnounces = $announces->where('v_brand','like','%'.$keyword.'%')
+        ->orwhere('v_model','like','%'.$keyword.'%')
+        ->get();
+
+        echo json_encode($filteredAnnounces);
+
+    }
 }

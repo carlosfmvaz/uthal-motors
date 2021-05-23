@@ -20,10 +20,12 @@
                 <h3>Search for a desired vehicle!</h3>
                 <label for="" class="form-label">Type the brand or the vehicle model:</label>
                 <div class="col-md-8">
-                    <input type="text" id="search-input" class="form-control">
+                    <form action="announces/all" method="get" id="keyword-filter-form">
+                        <input type="text" id="search-input" name="keyword" class="form-control">
+                    </form>
                 </div>
                 <div class="col-md-4 col-sm-6" id="search-btn-div">
-                    <button class="btn col-md-6 btn-default-color" id="search-btn">Search</button>
+                    <button class="btn col-md-6 btn-default-color" onclick="submitKeywordForm()" type="submit" id="search-btn">Search</button>
                 </div>
             </div>
         </div>
@@ -54,22 +56,22 @@
             </div>
         </div>
     </div>
- <!-- Footer -->
- <footer class="page-footer font-small blue pt-4">
-    <!-- Footer Links -->
-    <div class="container-fluid text-center text-md-left">
-        <!-- Grid row -->
-        <div class="row">
-            <!-- Grid column -->
-            <div class="col-md-6 mt-md-0 mt-3">
-                <!-- Content -->
-                <h5 class="text-uppercase">Uthal Motors</h5>
-                <p>We really hope that you find the best opportunity!</p>
-            </div>
-            <!-- Grid column -->
-            <hr class="clearfix w-100 d-md-none pb-3">
-            <!-- Grid column -->
-{{--                 <div class="col-md-3 mb-md-0 mb-3">
+    <!-- Footer -->
+    <footer class="page-footer font-small blue pt-4">
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+            <!-- Grid row -->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <!-- Content -->
+                    <h5 class="text-uppercase">Uthal Motors</h5>
+                    <p>We really hope that you find the best opportunity!</p>
+                </div>
+                <!-- Grid column -->
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <!-- Grid column -->
+                {{-- <div class="col-md-3 mb-md-0 mb-3">
                 <!-- Links -->
                 <h5 class="text-uppercase">Links</h5>
                 <ul class="list-unstyled">
@@ -106,17 +108,24 @@
                         <a href="#!">Link 4</a>
                     </li>
                 </ul>
+            </div> --}}
+                <!-- Grid column -->
             </div>
---}}                <!-- Grid column -->
+            <!-- Grid row -->
         </div>
-        <!-- Grid row -->
-    </div>
-    <!-- Footer Links -->
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2021 Copyright:
-        <a href="https://mdbootstrap.com/"> uthalmotors.com</a>
-    </div>
-    <!-- Copyright -->
-</footer>
-<!-- Footer -->
+        <!-- Footer Links -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2021 Copyright:
+            <a href="https://mdbootstrap.com/"> uthalmotors.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <script>
+        function submitKeywordForm(){
+            document.getElementById('keyword-filter-form').submit();
+        }
+    </script>
+
 @endsection

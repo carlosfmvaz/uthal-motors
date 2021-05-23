@@ -208,6 +208,10 @@ body{
 
 /* All announces content */
 
+#filter-message{
+    margin-top: 20px !important;
+}
+
 #filter{
     padding: 20px;
 }
