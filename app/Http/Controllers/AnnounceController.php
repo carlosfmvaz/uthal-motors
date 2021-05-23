@@ -16,7 +16,11 @@ class AnnounceController extends Controller
         $announce->id_cat = $request->category;
         $announce->v_brand = $request->brand;
         $announce->v_model = $request->model;
+        $announce->country = $request->country;
+        $announce->state = $request->state;
         $announce->city = $request->city;
+        $announce->latitude = $request->latitude;
+        $announce->longitude = $request->longitude;
         $announce->v_price = $price;
         $announce->v_color = $request->color;
         $announce->v_description = $request->description;

@@ -23,7 +23,11 @@ class CreateAnnouncesTable extends Migration
             $table->string('v_color');
             $table->longText('v_description');
             $table->longText('image');
+            $table->string('country');
+            $table->string('state');
             $table->string('city');
+            $table->string('latitude');
+            $table->string('longitude');
             $table->foreignId('id_owner');
         });
     }

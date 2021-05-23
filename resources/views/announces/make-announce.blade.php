@@ -20,17 +20,40 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="form-group col-6">
+                <div class="form-group col-3">
                     <label for="">Brand</label>
                     <input type="text" id="" name="brand" class="form-control">
                 </div>
-            </div>
-            <br>
-            <div class="row">
                 <div class="form-group col-3">
                     <label for="">Model</label>
                     <input type="text" name="model" id="" class="form-control">
                 </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="form-group col-4">
+                    <label for="">Country</label>
+                    <select name="country" id="country-select" class="form-select">
+                        <option value="" disabled selected>--- Choose a Country ---</option>
+                    </select>
+                </div>
+                <div class="form-group col-4">
+                    <label for="">State</label>
+                    <select name="state" id="state-select" class="form-select">
+                        <option value="" disabled selected>--- Choose a Region ---</option>
+                    </select>
+                </div>
+                <div class="form-group col-4">
+                    <label for="">City</label>
+                    <select name="city" id="city-select" class="form-select">
+                        <option value="" disabled selected>--- Choose a City ---</option>
+                    </select>
+                </div>
+                <input type="hidden" id="lat-id" name="latitude">
+                <input type="hidden" id="long-id" name="longitude">
+            </div>
+            <br>
+            <div class="row">
                 <div class="form-group col-3">
                     <label for="">Price</label>
                     <input type="text" id="price" name="price" class="form-control">
@@ -44,10 +67,6 @@
                         <option value="Red">Red</option>
                         <option value="Gray">Gray</option>
                     </select>
-                </div>
-                <div class="form-group col-3">
-                    <label for="">City</label>
-                    <input type="text" name="city" id="" class="form-control">
                 </div>
             </div>
             <br>
@@ -70,5 +89,6 @@
             </div>
         </form>
     </div>
+    <script src="/js/location-api.js"></script>
 
 @endsection
