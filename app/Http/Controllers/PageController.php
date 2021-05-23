@@ -35,12 +35,14 @@ class PageController extends Controller
             ->where('announces.id', $id)
             ->get(['announces.*', 'categories.cat_name']);
 
+        $categories = Category::all();
+
         // if the owner id is different from the logged id redirect to main page
         if (auth()->user()->id != $announce[0]->id_owner){
             return redirect("/");
         } 
 
-        return view('announces/edit-announce', ['announce' => $announce]);
+        return view('announces/edit-announce', ['announce' => $announce , 'categories' => $categories]);
     }
 
     public function showAnnounce($id)

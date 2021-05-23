@@ -27,7 +27,15 @@
                         </div>
                         <div class="row">
                             <label for="" class="form-label">Car Body:</label>
-                            <input type="text" class="form-control" value="{{ $announce[0]->cat_name }}">
+                            <select name="id_cat" id="" class="form-select">
+                                @foreach($categories as $category)
+                                    @if ($announce[0]->cat_name == $category->cat_name)
+                                        <option value="{{$category->id}}" selected>{{$category->cat_name}}</option>
+                                    @else
+                                        <option value="{{$category->id}}">{{$category->cat_name}}</option>
+                                    @endif
+                                @endforeach
+                        </select>
                         </div>
                         <div class="row">
                             <label for="" class="form-label">Color:</label>

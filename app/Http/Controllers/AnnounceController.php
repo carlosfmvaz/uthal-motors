@@ -53,6 +53,7 @@ class AnnounceController extends Controller
             'v_brand' => $request->brand,
             'v_model' => $request->model,
             'v_color' => $request->color,
+            'id_cat' => $request->id_cat,
             'v_price' => $price,
             'v_description' => $request->description
         ]);

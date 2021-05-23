@@ -1,7 +1,9 @@
 "use strict";
 
+// Get the url parameters
 let params = new URLSearchParams(window.location.search);
 
+// Function responsible for render all the announces
 const renderAnnounces = function (announces){
     
     document.getElementById('all-announces-content').innerHTML = "";
@@ -57,8 +59,10 @@ const renderAnnounces = function (announces){
     document.getElementById('filter-message').innerHTML = "";
 
 }
-
+// Code executed when the page is loaded
 window.onload = function(){
+
+    // Verify if there is a keyword search filter request
     if (params.has('keyword') && params.get('keyword') != ''){
         $.ajax({
             url: "filter-announces-keyword/" + params.get('keyword'),
@@ -76,6 +80,7 @@ window.onload = function(){
             },
         });
     }else{
+        // If there is not a filter request coming from the url then render all the announces
         $.ajax({
             url: "filter-announces",
             headers: {
@@ -94,6 +99,7 @@ window.onload = function(){
       
 }
 
+// Filter using the select box
 document.getElementById("form-select").addEventListener('change', function(){
     let selectEl = document.getElementById('form-select');
     
