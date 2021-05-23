@@ -30,6 +30,8 @@ Due to the use of Laravel Framework, the system structure is based on MVC (Model
 - Create an empty database using the database tools you prefer 
 - In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD options to match the credentials of the database you just created
 - Run "php artisan migrate" to migrate the entire database
+- Run "php artisan serve" to run the application on your localhost
+
 
 ## Screenshots
 
