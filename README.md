@@ -1,62 +1,49 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![logo](https://user-images.githubusercontent.com/43152329/119275240-4c31b700-bbea-11eb-8b3b-ebfe2629033c.png)
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## About Uthal Motors
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Uthal Motors is a simple vehicle announces registration platform entirely built using Laravel Framework! With the basics functionality of creating, editing, deleting, and showing items along with a basic authentication module using Livewire and Jetstream.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Some pages were built using JS + Jquery to render results from a filter without refreshing the page, making the application faster and dynamic!
 
-## Learning Laravel
+And all the views were built using Blade.  
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## API Integration
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+The project also contains a free location API integration called <a href='https://battuta.medunes.net'>Battuta</a>. This integration was important to prevent the user to type a Country/Region/City that does not exist! 
+Otherwise, probably someone would create an announcement in Barcelona - USA 😊
 
-## Laravel Sponsors
+## System structure
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Due to the use of Laravel Framework, the system structure is based on MVC (Model/View/Controller).
 
-### Premium Partners
+## Setting Up
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+- You must have PHP 7+ and Composer installed
+- Clone the repo typing "git clone https://github.com/CarlosFelipeM/uthal-motors"
+- Cd into the project folder and run "composer install" to download all the Composer dependencies
+- Run "npm install" to install all the required NPM packages
+- Create a copy of the ".env.example" file and rename to ".env"
+- Run "php artisan key:generate" to generate an app encryption key
+- Create an empty database using the database tools you prefer 
+- In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD options to match the credentials of the database you just created
+- Run "php artisan migrate" to migrate the entire database
 
-## Contributing
+## Screenshots
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![home](https://user-images.githubusercontent.com/43152329/119275120-a5e5b180-bbe9-11eb-86dc-2b6c50823b08.PNG)
 
-## Code of Conduct
+![see offers](https://user-images.githubusercontent.com/43152329/119275145-cd3c7e80-bbe9-11eb-802e-cf04149ce4f7.PNG)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+![register page](https://user-images.githubusercontent.com/43152329/119275150-d1689c00-bbe9-11eb-8217-bc85bd5f7b41.PNG)
 
-## Security Vulnerabilities
+![create announce](https://user-images.githubusercontent.com/43152329/119275159-d62d5000-bbe9-11eb-840e-51702b2515c4.PNG)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+![my announces](https://user-images.githubusercontent.com/43152329/119275162-d7f71380-bbe9-11eb-810a-63ebd3d94262.PNG)
 
-## License
+![edit announce](https://user-images.githubusercontent.com/43152329/119275165-d9c0d700-bbe9-11eb-9581-5b379d19bc5c.PNG)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![announce details](https://user-images.githubusercontent.com/43152329/119275166-db8a9a80-bbe9-11eb-90b4-33d4cdf84a4b.PNG)
+
