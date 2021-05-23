@@ -34,10 +34,6 @@
                             <input type="text" name="color" class="form-control" value="{{ $announce[0]->v_color }}">
                         </div>
                         <div class="row">
-                            <label for="" class="form-label">Location:</label>
-                            <input type="text" name="city" class="form-control" value="{{ $announce[0]->city }}">
-                        </div>
-                        <div class="row">
                             <label for="" class="form-label">Price:</label>
                             <input type="text" name="price" id="price" class="form-control"
                                 value="{{ $announce[0]->v_price }}">

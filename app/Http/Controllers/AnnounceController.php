@@ -18,9 +18,9 @@ class AnnounceController extends Controller
         $announce->v_model = $request->model;
         $announce->country = $request->country;
         $announce->state = $request->state;
-        $announce->city = $request->city;
-        $announce->latitude = $request->latitude;
-        $announce->longitude = $request->longitude;
+        $announce->city = $request->city == NULL ? '' : $request->city;
+        $announce->latitude = $request->latitude == NULL ? '' : $request->latitude;
+        $announce->longitude = $request->longitude == NULL ? '' : $request->longitude;
         $announce->v_price = $price;
         $announce->v_color = $request->color;
         $announce->v_description = $request->description;
@@ -53,7 +53,6 @@ class AnnounceController extends Controller
             'v_brand' => $request->brand,
             'v_model' => $request->model,
             'v_color' => $request->color,
-            'city' => $request->city,
             'v_price' => $price,
             'v_description' => $request->description
         ]);
