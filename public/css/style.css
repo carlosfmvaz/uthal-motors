@@ -327,6 +327,5 @@ body{
     background-color: rgb(24, 24, 24);
     color: #ffff;
     bottom: 0 !important;
-    position: absolute;
     width: 100% !important;
 }
