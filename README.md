@@ -22,7 +22,7 @@ Due to the use of Laravel Framework, the system structure is based on MVC (Model
 ## Setting Up
 
 - You must have PHP 7+ and Composer installed
-- Clone the repo typing "git clone https://github.com/CarlosFelipeM/uthal-motors"
+- Clone the repo typing "git clone https://github.com/cfmvaz/uthal-motors"
 - Cd into the project folder and run "composer install" to download all the Composer dependencies
 - Run "npm install" to install all the required NPM packages
 - Create a copy of the ".env.example" file and rename to ".env"
